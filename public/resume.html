@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabinarayan Mishra - Resume</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= BASE STRUCTURE ================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 13.5px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 15px;
+            text-transform: uppercase;
+            padding-bottom: 4px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 14px;
+            margin: 0 0 4px 0;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 13.5px;
+            font-style: italic;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        p {
+            font-size: 13.5px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 13.5px;
+            margin-bottom: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 8px;
+            font-size: 13.5px;
+            margin-bottom: 5px;
+        }
+
+        .skills-category {
+            font-weight: 600;
+        }
+
+        .project-links a {
+            margin-right: 15px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* ================= SCREEN - DARK THEME ================= */
+
+        @media screen {
+
+            body {
+                background-color: #0b080c;
+                color: #eae5ec;
+                padding: 80px 40px;
+            }
+
+            .download-btn {
+                position: fixed;
+                top: 30px;
+                right: 40px;
+                background: #c2a4ff;
+                color: #000;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 14px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: 0.2s;
+                text-decoration: none;
+                z-index: 100;
+            }
+
+            .download-btn:hover {
+                background: #a985ff;
+                transform: translateY(-2px);
+            }
+
+            h1,
+            h2,
+            h3,
+            .skills-category {
+                color: #ffffff;
+            }
+
+            h2 {
+                border-bottom: 1.5px solid #ffffff;
+            }
+
+            .contact-info {
+                color: #aaa;
+            }
+
+            .contact-info a {
+                color: #c2a4ff;
+                text-decoration: none;
+            }
+
+            .contact-info a:hover {
+                text-decoration: underline;
+            }
+
+            .subtitle {
+                color: #bbb;
+            }
+
+            p,
+            li {
+                color: #eae5ec;
+            }
+
+            .project-links a {
+                color: #c2a4ff;
+                text-decoration: none;
+            }
+
+            .project-links a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        /* ================= PRINT - LIGHT THEME ================= */
+
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 10mm 15mm;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                font-family: 'Times New Roman', Times, serif !important;
+                padding: 0;
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                font-size: 10.5pt;
+                line-height: 1.25;
+            }
+
+            .resume-container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .download-btn {
+                display: none !important;
+            }
+
+            h1,
+            h2,
+            h3,
+            p,
+            li,
+            div,
+            span,
+            a,
+            .skills-category {
+                color: #000000 !important;
+                font-family: 'Times New Roman', Times, serif !important;
+            }
+
+            h1 {
+                font-size: 24pt !important;
+                font-weight: normal !important;
+                margin-bottom: 2px !important;
+                letter-spacing: normal !important;
+            }
+
+            .contact-info {
+                font-size: 10.5pt !important;
+                margin-bottom: 12px !important;
+            }
+
+            h2 {
+                border-bottom: 1px solid #000000 !important;
+                font-size: 12pt !important;
+                margin-top: 10px !important;
+                margin-bottom: 4px !important;
+                padding-bottom: 1px !important;
+                font-weight: bold !important;
+                letter-spacing: normal !important;
+            }
+
+            h3 {
+                font-size: 11pt !important;
+                font-weight: bold !important;
+                margin-bottom: 1px !important;
+            }
+
+            h3 span:last-child {
+                font-weight: normal !important;
+            }
+
+            .subtitle {
+                font-size: 10.5pt !important;
+                color: #000000 !important;
+                margin-bottom: 3px !important;
+                font-style: italic !important;
+            }
+
+            p,
+            li {
+                font-size: 10.5pt !important;
+                margin-bottom: 2px !important;
+            }
+
+            ul {
+                margin-bottom: 8px !important;
+                padding-left: 15px !important;
+            }
+
+            .skills-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 2px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .skills-grid > div:nth-child(odd) {
+                display: inline !important;
+                font-weight: bold !important;
+                width: auto !important;
+            }
+
+            .skills-grid > div:nth-child(even) {
+                display: inline !important;
+                margin-bottom: 2px !important;
+            }
+
+            .contact-info a {
+                text-decoration: none !important;
+            }
+
+            h2,
+            h3,
+            .subtitle,
+            p,
+            ul,
+            .skills-grid {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DOWNLOAD BUTTON -->
+
+    <a
+        href="/Rabinarayan_Mishra_Resume.pdf"
+        download="Rabinarayan_Mishra_Resume.pdf"
+        class="download-btn"
+    >
+        <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            height="18px"
+            width="18px"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+        </svg>
+
+        Download PDF
+    </a>
+
+
+    <div class="resume-container">
+
+        <!-- HEADER -->
+
+        <h1>Rabinarayan Mishra</h1>
+
+        <div class="contact-info">
+
+            Aspiring Data Analyst | Python • SQL • Excel • Power BI • Tableau
+            <br>
+
+            Ameerpet, Hyderabad, Telangana, India – 500016 |
+            <a href="mailto:mrabinarayan43@gmail.com">
+                mrabinarayan43@gmail.com
+            </a>
+
+            <br>
+
+            <a
+                href="https://www.linkedin.com/in/rabi-12bb32371/"
+                target="_blank"
+            >
+                linkedin.com/in/rabi-12bb32371
+            </a>
+            |
+
+            <a
+                href="https://github.com/rabinarayan-mishra"
+                target="_blank"
+            >
+                github.com/rabinarayan-mishra
+            </a>
+
+        </div>
+
+
+        <!-- PROFESSIONAL SUMMARY -->
+
+        <h2>Professional Summary</h2>
+
+        <p>
+            Aspiring Data Analyst and B.Tech Computer Science and Engineering
+            student with hands-on experience in Python, SQL, Excel, Power BI,
+            and Tableau. Skilled in data cleaning, data handling, exploratory
+            data analysis, data visualization, dashboard development, and
+            extracting meaningful business insights from datasets. Seeking
+            an entry-level Data Analyst opportunity to apply analytical and
+            technical skills to real-world business problems.
+        </p>
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skills-category">
+                Programming & Query Languages
+            </div>
+
+            <div>
+                Python, SQL, MySQL
+            </div>
+
+
+            <div class="skills-category">
+                Data Analysis
+            </div>
+
+            <div>
+                Pandas, NumPy, Statistics, EDA, Data Cleaning,
+                Data Handling, Data Transformation
+            </div>
+
+
+            <div class="skills-category">
+                Visualization & BI
+            </div>
+
+            <div>
+                Excel, Power BI, Tableau, Matplotlib,
+                Data Visualization, Dashboard Development, KPI Reporting
+            </div>
+
+
+            <div class="skills-category">
+                Tools
+            </div>
+
+            <div>
+                Git, GitHub, VS Code, Power Query, DAX
+            </div>
+
+        </div>
+
+
+        <!-- EDUCATION -->
+
+        <h2>Education</h2>
+
+        <h3>
+            <span>
+                Bachelor of Technology (B.Tech) - Computer Science and Engineering
+            </span>
+
+            <span>
+                2026
+            </span>
+        </h3>
+
+        <div class="subtitle">
+            <span>
+                Trident Academy of Technology, Bhubaneswar, Odisha
+            </span>
+        </div>
+
+        <ul>
+
+            <li>
+                Pursuing B.Tech in Computer Science and Engineering with
+                coursework and practical learning in programming, databases,
+                data analytics, and software development.
+            </li>
+
+        </ul>
+
+
+        <!-- EXPERIENCE -->
+
+        <h2>Experience</h2>
+
+        <h3>
+            <span>
+                Industrial Training
+            </span>
+
+            <span>
+                2 June 2025 – 2 July 2025
+            </span>
+        </h3>
+
+        <div class="subtitle">
+            <span>
+                NTPC Limited, Talcher, Kanihan
+            </span>
+        </div>
+
+        <ul>
+
+            <li>
+                Completed industrial training at NTPC Limited, Talcher,
+                Kanihan, gaining practical exposure to computer vision and
+                deep learning concepts.
+            </li>
+
+            <li>
+                Worked on
+                <strong>
+                    Image Stylization Using Neural Style Transfer and
+                    Pre-trained Convolutional Neural Networks
+                </strong>.
+            </li>
+
+            <li>
+                Explored image processing and neural style transfer techniques
+                for transforming input images into artistic outputs.
+            </li>
+
+        </ul>
+
+
+        <!-- PROJECTS -->
+
+        <h2>Projects</h2>
+
+
+        <!-- AIRLINE MANAGEMENT SYSTEM -->
+
+        <h3>
+            <span>
+                Airline Management System
+            </span>
+
+            <span>
+                2026
+            </span>
+        </h3>
+
+        <div class="subtitle">
+            <span>
+                Python, Tkinter, MySQL
+            </span>
+        </div>
+
+        <ul>
+
+            <li>
+                Developed a desktop-based Airline Management System using
+                Python, Tkinter, and MySQL to manage airline operations.
+            </li>
+
+            <li>
+                Implemented passenger registration, flight booking,
+                seat allocation, boarding pass generation, ticket
+                cancellation, and journey details.
+            </li>
+
+            <li>
+                Used MySQL for database management and CRUD operations
+                involving passenger, flight, and reservation data.
+            </li>
+
+        </ul>
+
+        <div class="project-links">
+
+            <a
+                href="https://github.com/rabinarayan-mishra/Airlinemanagement_system"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+        </div>
+
+
+        <!-- AIRLINE ANALYSIS -->
+
+        <h3>
+            <span>
+                Airline Management System Analysis
+            </span>
+
+            <span>
+                2026
+            </span>
+        </h3>
+
+        <div class="subtitle">
+            <span>
+                SQL, Excel, Power Query, Power BI, DAX
+            </span>
+        </div>
+
+        <ul>
+
+            <li>
+                Developed a Business Intelligence project to analyze
+                airline bookings, revenue, passengers, routes, and
+                seat occupancy.
+            </li>
+
+            <li>
+                Cleaned and transformed airline operational data using
+                SQL, Excel, and Power Query.
+            </li>
+
+            <li>
+                Built interactive Power BI dashboards using DAX,
+                KPIs, charts, and business-focused visualizations.
+            </li>
+
+        </ul>
+
+        <div class="project-links">
+
+            <a
+                href="https://github.com/rabinarayan-mishra/Airlinemanagement_system_Analysis"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+        </div>
+
+
+        <!-- HR ANALYTICS -->
+
+        <h3>
+            <span>
+                HR Analytics Dashboard
+            </span>
+
+            <span>
+                2026
+            </span>
+        </h3>
+
+        <div class="subtitle">
+            <span>
+                Python, SQL, Excel, Tableau
+            </span>
+        </div>
+
+        <ul>
+
+            <li>
+                Developed an interactive Tableau dashboard to analyze
+                workforce demographics, departments, salary, education,
+                performance, and employment status.
+            </li>
+
+            <li>
+                Applied data cleaning, exploratory data analysis,
+                and visualization techniques to prepare HR data.
+            </li>
+
+            <li>
+                Created business-focused visualizations to help understand
+                workforce distribution and organizational trends.
+            </li>
+
+        </ul>
+
+        <div class="project-links">
+
+            <a
+                href="https://github.com/rabinarayan-mishra/HR-Analytics-Dashboard"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://public.tableau.com/views/HRDashboard_17875880303560/HRSummary"
+                target="_blank"
+            >
+                Tableau
+            </a>
+
+        </div>
+
+
+        <!-- BLINKIT -->
+
+        <h3>
+            <span>
+                Blinkit Analysis
+            </span>
+
+            <span>
+                2026
+            </span>
+        </h3>
+
+        <div class="subtitle">
+            <span>
+                Excel, Power BI, DAX, Data Analytics
+            </span>
+        </div>
+
+        <ul>
+
+            <li>
+                Analyzed Blinkit sales and operational data to understand
+                sales performance, product categories, outlet
+                characteristics, and customer demand.
+            </li>
+
+            <li>
+                Cleaned and transformed raw data using Excel and
+                Power Query.
+            </li>
+
+            <li>
+                Developed Power BI visualizations and KPIs to identify
+                business trends and generate actionable insights.
+            </li>
+
+        </ul>
+
+
+        <!-- COVID DASHBOARD -->
+
+        <h3>
+            <span>
+                COVID-19 India Dashboard
+            </span>
+
+            <span>
+                2026
+            </span>
+        </h3>
+
+        <div class="subtitle">
+            <span>
+                Excel, Power BI, Data Analysis, Data Visualization
+            </span>
+        </div>
+
+        <ul>
+
+            <li>
+                Developed an interactive dashboard to analyze COVID-19
+                trends across India.
+            </li>
+
+            <li>
+                Analyzed cases, recoveries, deaths, testing, vaccination,
+                age groups, gender distribution, and state-wise trends.
+            </li>
+
+            <li>
+                Used dashboarding and visualization techniques to present
+                complex data in a clear and understandable format.
+            </li>
+
+        </ul>
+
+
+        <!-- CERTIFICATIONS -->
+
+        <h2>Certifications</h2>
+
+        <ul>
+
+            <li>
+                <strong>
+                    Data Analytics Job Simulation
+                </strong>
+                – Deloitte Australia, Forage
+            </li>
+
+            <li>
+                <strong>
+                    Industrial Training Certificate
+                </strong>
+                – NTPC Limited, Talcher, Kanihan
+            </li>
+
+        </ul>
+
+
+        <!-- ADDITIONAL INFORMATION -->
+
+        <h2>Additional Information</h2>
+
+        <ul>
+
+            <li>
+                <strong>Career Interest:</strong>
+                Data Analytics, Business Intelligence, Data Visualization
+            </li>
+
+            <li>
+                <strong>Core Skills:</strong>
+                Python, SQL/MySQL, Excel, Power BI, Tableau
+            </li>
+
+            <li>
+                <strong>Location:</strong>
+                Ameerpet, Hyderabad, Telangana, India – 500016
+            </li>
+
+            <li>
+                <strong>Graduation:</strong>
+                2026
+            </li>
+
+        </ul>
+
+    </div>
+
+</body>
+</html>
